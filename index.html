@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model Profile</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: white;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Search */
+.search {
+    padding: 10px;
+    background: white;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Image */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Contact */
+.contact {
+    display: none;
+    background: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">model.com</div>
+</div>
+
+<div class="search">
+    <input type="text" placeholder="Search...">
+</div>
+
+<div class="container">
+
+    <!-- IMAGE -->
+    <img src="model.jpg" alt="Model">
+
+    <br>
+
+    <button onclick="toggleLike()" id="likeBtn">♡ Add to List</button>
+    <button onclick="toggleContact()">Contact Info</button>
+
+    <div class="contact" id="contactBox">
+        <p><b>Name:</b> Naitik Jaisawl</p>
+        <p><b>Location:</b> India - Mumbai</p>
+    </div>
+
+</div>
+
+<script>
+function toggleContact() {
+    let box = document.getElementById("contactBox");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function toggleLike() {
+    let btn = document.getElementById("likeBtn");
+
+    if (btn.innerText === "♡ Add to List") {
+        btn.innerText = "❤️ Added";
+    } else {
+        btn.innerText = "♡ Add to List";
+    }
+}
+</script>
+
+</body>
+</html>
